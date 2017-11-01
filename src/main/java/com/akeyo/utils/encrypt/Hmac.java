@@ -30,6 +30,7 @@ public class Hmac {
         return Base64.encode(mac(str, key, HmacType.HmacSHA1));
     }
 
+    //支持的方式
     enum HmacType {
         HmacSHA256, HmacSHA1
     }
