@@ -2,6 +2,7 @@ package com.akeyo.utils.encrypt;
 
 
 import com.akeyo.utils.Base64;
+import com.akeyo.utils.Hex;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -29,6 +30,15 @@ public class Hmac {
     public static String sha1(String str, String key) throws NoSuchAlgorithmException, InvalidKeyException, UnsupportedEncodingException {
         return Base64.encode(mac(str, key, HmacType.HmacSHA1));
     }
+
+    public static String hex_sha256(String str, String key) throws NoSuchAlgorithmException, InvalidKeyException, UnsupportedEncodingException {
+        return Hex.binary2hex(mac(str, key, HmacType.HmacSHA256));
+    }
+
+    public static String hex_sha1(String str, String key) throws NoSuchAlgorithmException, InvalidKeyException, UnsupportedEncodingException {
+        return Hex.binary2hex(mac(str, key, HmacType.HmacSHA1));
+    }
+
 
     //支持的方式
     enum HmacType {

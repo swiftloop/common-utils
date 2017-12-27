@@ -112,6 +112,39 @@ public class XFDigest {
 
 
     /**
+     * hmac sha256  转十六进制
+     *
+     * @param text 加密文本
+     * @param key  加密key
+     * @return 密文
+     */
+    public static String hex_macSha256(String text, String key) {
+        try {
+            return Hmac.hex_sha256(text, key);
+        } catch (Exception e) {
+            //
+        }
+        return "";
+    }
+
+    /**
+     * hmac sha1 转十六进制
+     *
+     * @param text 待加密文本
+     * @param key  加密key
+     * @return 密文
+     */
+    public static String hex_macSha1(String text, String key) {
+        try {
+            return Hmac.hex_sha1(text, key);
+        } catch (Exception e) {
+            //
+        }
+        return "";
+    }
+
+
+    /**
      * md5 加密
      *
      * @param text 原文
