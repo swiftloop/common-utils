@@ -1,6 +1,6 @@
 package com.akeyo.utils;
 
-/* *
+/**
  *Created by: Sorata 2017/10/26 0026 下午 7:01
  *  十六进制转化
  */
@@ -9,9 +9,9 @@ public class Hex {
     private static char[] chars = "0123456789abcdef".toCharArray();
 
 
-    /*byte数组 转为十六进制字符串
-     * @param bytes
-     * @return
+    /**byte数组 转为十六进制字符串
+     * @param bytes 字节数组
+     * @return  字符串
      */
     public static String binary2hex(byte[] bytes) {
         if (null == bytes) {
